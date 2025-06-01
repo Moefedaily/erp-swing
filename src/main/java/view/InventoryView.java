@@ -62,12 +62,10 @@ public class InventoryView extends JFrame {
         lowStockButton = new JButton("Show Low Stock");
         lowStockButton.setFont(new Font("Arial", Font.PLAIN, 12));
         lowStockButton.setBackground(new Color(220, 53, 69));
-        lowStockButton.setForeground(Color.WHITE);
         
         restockButton = new JButton("Restock Selected");
         restockButton.setFont(new Font("Arial", Font.PLAIN, 12));
         restockButton.setBackground(new Color(40, 167, 69));
-        restockButton.setForeground(Color.WHITE);
         
         thresholdSpinner = new JSpinner(new SpinnerNumberModel(10, 0, 100, 1));
         thresholdSpinner.setPreferredSize(new Dimension(60, 25));
