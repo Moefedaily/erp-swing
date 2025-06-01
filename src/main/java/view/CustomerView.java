@@ -56,18 +56,18 @@ public class CustomerView extends JFrame {
         customerTable.getColumnModel().getColumn(5).setPreferredWidth(200);
         
         loadButton = new JButton("Charger clients");
-        loadButton.setFont(new Font("Arial", Font.BOLD, 12));
+        loadButton.setFont(new Font("Arial", Font.PLAIN, 12));
         loadButton.setBackground(new Color(70, 130, 180));
-        loadButton.setForeground(Color.WHITE);
         
         refreshButton = new JButton("Actualiser");
         refreshButton.setFont(new Font("Arial", Font.PLAIN, 12));
+        refreshButton.setBackground(new Color(70, 130, 180));
+
         
         addButton = new JButton("Ajouter client");
-        addButton.setFont(new Font("Arial", Font.BOLD, 12));
-        addButton.setBackground(new Color(34, 139, 34));
-        addButton.setForeground(Color.WHITE);
-        
+        addButton.setFont(new Font("Arial", Font.PLAIN, 12));
+        addButton.setBackground(new Color(70, 130, 180)); 
+
         statusLabel = new JLabel("Cliquez sur 'Charger clients' pour afficher les données");
         statusLabel.setFont(new Font("Arial", Font.ITALIC, 12));
         statusLabel.setForeground(Color.GRAY);
@@ -113,7 +113,6 @@ public class CustomerView extends JFrame {
             }
         });
         
-        // ← Nouveau listener pour le bouton Ajouter
         addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
