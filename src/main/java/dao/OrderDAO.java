@@ -65,7 +65,7 @@ public class OrderDAO {
             lineStmt.executeBatch();
             
             conn.commit();
-            System.out.println("✅ Order created successfully with ID: " + orderId);
+            System.out.println("Order created successfully with ID: " + orderId);
             
             return orderId;
             

@@ -53,9 +53,7 @@ public class ProductDAO {
         return products;
     }
     
-    /**
-     * Récupérer les produits filtrés par catégorie
-     */
+    
     public List<Product> getProductsByCategory(int categoryId) {
         List<Product> products = new ArrayList<>();
         String sql = """
@@ -122,9 +120,7 @@ public class ProductDAO {
         return categories;
     }
     
-    /**
-     * Rechercher des produits par titre
-     */
+    
     public List<Product> searchProductsByTitle(String searchTerm) {
         List<Product> products = new ArrayList<>();
         String sql = """
