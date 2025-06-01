@@ -1,6 +1,9 @@
 package main.java.view;
 
 import javax.swing.*;
+
+import main.java.util.DatabaseManager;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -197,11 +200,7 @@ public class AddCustomerForm extends JDialog {
         saveButton.setText("Enregistrement...");
         
         try {
-            String dbUrl = "jdbc:postgresql://localhost:5432/etl_database";
-            String dbUser = "postgres";
-            String dbPassword = "root";
-            
-            Connection conn = DriverManager.getConnection(dbUrl, dbUser, dbPassword);
+            Connection conn = DatabaseManager.getConnection();
             
             String sql = "{ ? = call new_customer(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) }";
             CallableStatement stmt = conn.prepareCall(sql);

@@ -1,7 +1,6 @@
 package main.java.dao;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.sql.PreparedStatement;
@@ -10,21 +9,11 @@ import java.util.ArrayList;
 import java.util.List;
 import main.java.model.Category;
 import main.java.model.Product;
+import main.java.util.DatabaseManager;
 
 public class ProductDAO {
-    
-    private static final String DB_URL = "jdbc:postgresql://localhost:5432/etl_database";
-    private static final String DB_USER = "postgres";
-    private static final String DB_PASSWORD = "root";
-    
-   
     private Connection getConnection() throws SQLException {
-        try {
-            Class.forName("org.postgresql.Driver");
-            return DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-        } catch (ClassNotFoundException e) {
-            throw new SQLException("Driver PostgreSQL non trouvé", e);
-        }
+        return DatabaseManager.getConnection();
     }
     
     
