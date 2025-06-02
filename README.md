@@ -6,11 +6,11 @@ An Enterprise Resource Planning (ERP) system built with Java Swing and PostgreSQ
 
 ### Modules
 
-- **Customer Management** - View and add customers using SQL stored procedures
-- **Product Catalog** - Browse products with category filtering and search
-- **Order Management** - Create orders with shopping cart functionality
-- **Order History** - View customer order history and order details
-- **Inventory Management** - Track stock levels and manage restocking
+- **Customer Management** - View and add customers.
+- **Product Catalog** - Browse products with category filtering and search.
+- **Order Management** - Create orders with shopping cart.
+- **Order History** - View customer order history and order details.
+- **Inventory Management** - Track stock levels and manage restocking.
 
 ## Technical Stack
 
