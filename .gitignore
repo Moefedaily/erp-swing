@@ -1,0 +1,8 @@
+
+*.class
+*.jar
+*.zip
+*.tar.gz
+*.rar
+.env
+
